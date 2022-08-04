@@ -1,0 +1,110 @@
+DROP DATABASE IF EXISTS lts;
+CREATE DATABASE lts;
+USE lts;
+
+# USER TABLE
+CREATE TABLE IF NOT EXISTS users (
+  `UserID` INT NOT NULL AUTO_INCREMENT,
+  `Password` VARCHAR(32) NOT NULL,
+  `isADMIN` TINYINT NOT NULL,
+  PRIMARY KEY (`UserID`),
+  UNIQUE INDEX `UserID_UNIQUE` (`UserID` ASC) VISIBLE);
+
+INSERT INTO users (UserID, password, isADMIN) VALUES (1, 'ADMIN', 1);
+
+
+
+# LOCATION TABLE
+CREATE TABLE IF NOT EXISTS locations (
+  `locationID` INT NOT NULL AUTO_INCREMENT,
+  `locationNumber` INT NOT NULL,
+  `locationState` TINYINT NOT NULL,
+  `hasLotID` INT NULL,
+  PRIMARY KEY (`locationID`),
+  UNIQUE INDEX `locationID_UNIQUE` (`locationID` ASC) VISIBLE,
+  UNIQUE INDEX `locationNumber_UNIQUE` (`locationNumber` ASC) VISIBLE,
+  UNIQUE INDEX `hasLotID_UNIQUE` (`hasLotID` ASC) VISIBLE);
+
+insert into locations (locationID, locationNumber, locationState) values (1, 1, 0);
+insert into locations (locationID, locationNumber, locationState) values (2, 2, 0);
+insert into locations (locationID, locationNumber, locationState) values (3, 3, 0);
+insert into locations (locationID, locationNumber, locationState) values (4, 4, 0);
+insert into locations (locationID, locationNumber, locationState) values (5, 5, 0);
+insert into locations (locationID, locationNumber, locationState) values (6, 6, 0);
+insert into locations (locationID, locationNumber, locationState) values (7, 7, 0);
+insert into locations (locationID, locationNumber, locationState) values (8, 8, 0);
+insert into locations (locationID, locationNumber, locationState) values (9, 9, 0);
+insert into locations (locationID, locationNumber, locationState) values (10, 10, 0);
+
+
+
+
+
+# WAFER TABLE
+CREATE TABLE IF NOT EXISTS wafers (
+  `waferID` INT NOT NULL,
+  `lotID` INT NULL,
+  PRIMARY KEY (`waferID`),
+  UNIQUE INDEX `waferID_UNIQUE` (`waferID` ASC) VISIBLE);
+
+insert into wafers (waferID, lotID) values (1, 0);
+insert into wafers (waferID, lotID) values (2, 0);
+insert into wafers (waferID, lotID) values (3, 0);
+insert into wafers (waferID, lotID) values (4, 0);
+insert into wafers (waferID, lotID) values (5, 0);
+insert into wafers (waferID, lotID) values (6, 0);
+insert into wafers (waferID, lotID) values (7, 0);
+insert into wafers (waferID, lotID) values (8, 0);
+insert into wafers (waferID, lotID) values (9, 0);
+insert into wafers (waferID, lotID) values (10, 0);
+insert into wafers (waferID, lotID) values (11, 0);
+insert into wafers (waferID, lotID) values (12, 0);
+insert into wafers (waferID, lotID) values (13, 0);
+insert into wafers (waferID, lotID) values (14, 0);
+insert into wafers (waferID, lotID) values (15, 0);
+insert into wafers (waferID, lotID) values (16, 0);
+insert into wafers (waferID, lotID) values (17, 0);
+insert into wafers (waferID, lotID) values (18, 0);
+insert into wafers (waferID, lotID) values (19, 0);
+insert into wafers (waferID, lotID) values (20, 0);
+insert into wafers (waferID, lotID) values (21, 0);
+insert into wafers (waferID, lotID) values (22, 0);
+insert into wafers (waferID, lotID) values (23, 0);
+insert into wafers (waferID, lotID) values (24, 0);
+insert into wafers (waferID, lotID) values (25, 0);
+insert into wafers (waferID, lotID) values (26, 0);
+insert into wafers (waferID, lotID) values (27, 0);
+insert into wafers (waferID, lotID) values (28, 0);
+insert into wafers (waferID, lotID) values (29, 0);
+insert into wafers (waferID, lotID) values (30, 0);
+insert into wafers (waferID, lotID) values (31, 0);
+insert into wafers (waferID, lotID) values (32, 0);
+insert into wafers (waferID, lotID) values (33, 0);
+insert into wafers (waferID, lotID) values (34, 0);
+insert into wafers (waferID, lotID) values (35, 0);
+insert into wafers (waferID, lotID) values (36, 0);
+insert into wafers (waferID, lotID) values (37, 0);
+insert into wafers (waferID, lotID) values (38, 0);
+insert into wafers (waferID, lotID) values (39, 0);
+insert into wafers (waferID, lotID) values (40, 0);
+insert into wafers (waferID, lotID) values (41, 0);
+insert into wafers (waferID, lotID) values (42, 0);
+insert into wafers (waferID, lotID) values (43, 0);
+insert into wafers (waferID, lotID) values (44, 0);
+insert into wafers (waferID, lotID) values (45, 0);
+insert into wafers (waferID, lotID) values (46, 0);
+insert into wafers (waferID, lotID) values (47, 0);
+insert into wafers (waferID, lotID) values (48, 0);
+insert into wafers (waferID, lotID) values (49, 0);
+insert into wafers (waferID, lotID) values (50, 0);
+
+
+
+# LOT TABLE
+CREATE TABLE IF NOT EXISTS lots (
+  `lotID` INT NOT NULL,
+  `waferAmount` INT NOT NULL,
+  `lotStatus` INT NOT NULL,
+  `atLocation` INT NOT NULL,
+  PRIMARY KEY (`lotID`),
+  UNIQUE INDEX `lotID_UNIQUE` (`lotID` ASC) VISIBLE);
