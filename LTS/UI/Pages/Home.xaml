@@ -1,0 +1,160 @@
+﻿<Page x:Class="UI.Pages.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UI.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="750"
+      d:DesignWidth="1000"
+      Background="DarkSlateGray"
+      Title="Home">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Text="WELCOME BACK"
+            Foreground="AntiqueWhite"
+            FontSize="30"
+            Grid.Row="0"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0, 90, 0, 0"
+            />
+
+
+
+        <Button
+            Content="wafer information"
+            FontSize="20"
+            Grid.Column="1"
+            Grid.Row="1"
+            MinHeight="200"
+            MinWidth="200"
+            Margin="0, 30, 5, 10"
+            Background="DarkSalmon"
+            BorderBrush="Black"
+            Click="ModelBtn_Click"
+            >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button
+            Content="account settings"
+            FontSize="20"
+            Grid.Column="1"
+            Grid.Row="2"
+            MinHeight="200"
+            MinWidth="200"
+            Margin="0, 0, 5, 40"
+            Background="DarkSalmon"
+            BorderBrush="Black"
+            Click="SettingsBtn_Click"
+            >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button
+            Content="lot information"
+            FontSize="20"
+            Grid.Column="2"
+            Grid.Row="1"
+            MinHeight="200"
+            MinWidth="200"
+            Margin="5, 30, 0, 10"
+            Background="DarkSalmon"
+            BorderBrush="Black"
+            Click="LotInfoBtn_Click"
+            >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button
+            Content="location information"
+            FontSize="20"
+            Grid.Column="2"
+            Grid.Row="2"
+            MinHeight="200"
+            MinWidth="200"
+            Margin="5, 0, 0, 40"
+            Background="DarkSalmon"
+            BorderBrush="Black"
+            Click="LocationInfoBtn_Click"
+            >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button
+            Content="log out"
+            FontSize="20"
+            Grid.Column="0"
+            Grid.Row="3"
+            MinHeight="40"
+            MinWidth="150"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="25, -10, 0, 0"
+            Background="PaleVioletRed"
+            BorderBrush="Black"
+            Click="LogoutBtn_Click"
+            >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button
+            Content="new lot"
+            FontSize="20"
+            Grid.Column="3"
+            Grid.Row="0"
+            MinHeight="40"
+            MinWidth="150"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0, 25, 40, 0"
+            Background="PaleVioletRed"
+            BorderBrush="Black"
+            Click="NewlotBtn_Click"
+            >
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Page>
